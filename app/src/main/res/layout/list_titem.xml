@@ -54,6 +54,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="Desc:" />
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/fav"
+                    android:layout_gravity="right"
+                    />
 
             </LinearLayout>
 

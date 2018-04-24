@@ -41,6 +41,7 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetView
     public void onBindViewHolder(PlanetViewHolder holder, int position) {
         holder.titleTv.setText(Planetlist.get(position).GetName());
         holder.descTv.setText(Planetlist.get(position).GetDesc());
+        holder.img.setImageURI(Planetlist.get(position).GetImg_src());
     }
 
     @Override
@@ -50,10 +51,11 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetView
 
     protected class PlanetViewHolder extends RecyclerView.ViewHolder {
         TextView titleTv, descTv;
+        ImageView img;
 
         public PlanetViewHolder(View itemView) {
             super(itemView);
-
+            img = itemView.findViewById(R.id.planet_image_id);
             titleTv = itemView.findViewById(R.id.title_id);
             descTv = itemView.findViewById(R.id.desc_id);
         }

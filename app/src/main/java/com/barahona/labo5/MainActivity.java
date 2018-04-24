@@ -1,5 +1,6 @@
 package com.barahona.labo5;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -33,12 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Planetas> filllist() {
         ArrayList<Planetas> l = new ArrayList<>();
-        String desc = "ijbsadgojbsjgbsaodufbdsaiobfsdkf";
 
-        l.add(new Planetas(1, "omg", desc));
-        l.add(new Planetas(2, "watch", desc));
-        l.add(new Planetas(3, "this", desc));
-
+        l.add(new Planetas(1,String.valueOf(R.string.desc_Mercurio),"Mercurio", Uri.parse("android.resource//"+getPackageName()+"/"+R.drawable.mercurio)));
+        l.add(new Planetas(1,String.valueOf(R.string.desc_Mercurio),"Mercurio", Uri.parse("android.resource//"+getPackageName()+"/"+R.drawable.mercurio)));
         return l;
     }
 }
